@@ -1,0 +1,77 @@
+.container-1 {
+    
+    text-align: center;
+    margin: 100px;
+}
+
+.container-2{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+   
+    
+   
+    
+   
+
+}
+.cards{
+    margin: 100px;
+    outline-style: solid;
+    height: 350px;
+    width: 250px;
+
+}
+.title {
+    margin: 50px;
+
+}
+.description{
+margin: 100px;
+}
+.restart{
+    margin: 0px 0px 0px 0px;
+}
+.go{
+    position: relative;
+    left: 925px;
+}
+
+.pokemon1Choice {
+  height: 25px;
+  right: 500px;
+}
+
+
+@media screen and (max-width: 700px) {
+    /* .container-1 {
+    
+        text-align: center;
+        margin: 100px;
+        width: 300px;
+    }
+
+    .container-2{
+        text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+
+    } */
+    .cards {
+
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title{
+
+    }
+    .description{
+
+    }
+}
+
+       
