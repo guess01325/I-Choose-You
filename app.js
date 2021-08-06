@@ -1,5 +1,5 @@
 
-
+// call all data I need into variables
 const domain = "https://pokeapi.co/api/v2/"
 let pokeName1 = document.querySelector('.pokeName1')
 let type1 = document.querySelector(".type1")
@@ -24,9 +24,6 @@ let hp2 = 0
 let Pokemon1Choice = document.querySelector(".pokemon1Choice")
 let pokemon2Choice = document.querySelector('.pokemon2Choice')
 
-//  document.getElementById("restart").addEventListener("click",getAllData)
-
-// let pokeArray1 = ["pikachu"]
 
 
 
@@ -41,9 +38,10 @@ let pokemon2Choice = document.querySelector('.pokemon2Choice')
 
 
 
+// Render first pokemon
 
 const renderList = (content) =>{
-    //   pokeData.forEach((content) => {
+  
         pokeName1.textContent = `${content.name}`
         type1.textContent = `${content.types[0].type.name}` 
         move1.textContent = `${content.moves[0].move.name}`
@@ -62,7 +60,7 @@ const renderList = (content) =>{
         
         
     }
-    
+    // render second pokemon
     const renderList2 = (content2) => {
         pokeName2.textContent = `${content2.name}`
         type2.textContent = `${content2.types[0].type.name}`
@@ -72,7 +70,7 @@ const renderList = (content) =>{
        
     } 
     
-    
+    // Choose who wins
     const choice = () =>{
         console.log(hp1)
         if (hp1 > hp2) {
@@ -90,7 +88,7 @@ const renderList = (content) =>{
     
     
     
-    
+    // Get initial set of Random data
     const getAllData = async () =>{
         try{
             const response = await axios.get("https://pokeapi.co/api/v2/pokemon/?offset=20&limit=30")
@@ -109,6 +107,8 @@ const renderList = (content) =>{
     }
     getAllData()
     
+    
+    // Get data for certain pokemon
     const getPokeData = async (pokemon1,pokemon2) =>{
         try{
             const response1 = await axios.get(`${domain}pokemon/${pokemon1.name}`)
@@ -128,10 +128,11 @@ const renderList = (content) =>{
 }
 
 
-// const removeElement()
 
 
 
+
+// Restart program for choice and pokemon data
 const restart = () => {
     Pokemon1Choice.textContent = ""
     pokemon2Choice.textContent = ""
