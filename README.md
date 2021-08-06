@@ -85,30 +85,48 @@ First wireframe showing the layout of the page and second is showing the results
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML/CSS/JS | H | 3hrs|   |    |
-| Working with API  | H | 4hrs|   |    |
-| Getting content   | H | 4hrs|   |    |    
-| Set up cards      | H | 5hrs|   |    |
-| Styles css        | H | 5hrs|   |    |
-| Responsive Design | H | 4hrs|   |    |
-| Advance css       | H | 5hrs|   |    |
-| Advance logic     | H | 5hrs|   |    |
-| Fix bugs          | H | 5hrs|
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Getting API       | H | 3hrs| 4hrs | 3rs |
+| Basic HTML/CSS/JS | H | 3hrs| 3hrs  | 3hrs |
+| Working with API  | H | 3hrs| 4hrs  | 3hrs |
+| Getting content from api   | H | 3hrs| 3hrs  | 3hrs |    
+| Set up cards      | H | 3 hr| 3hrs | 3hrs |
+| Styles css        | H | 3hrs| 4hrs  | 3hrs |
+| Get data (axios)  | H | 3hrs| 4hrs | 3hrs |
+| create winner Fn  | H | 3hrs| 3hrs | 3hrs |
+| create reset fn   | H | 3hrs| 3hrs | 3hrs |
+| Responsive Design | H | 3hrs| 3hrs | 3hrs |
+| Advance css       | H | 3hrs| 3hrs | 3hrs |
+| Advance logic     | H | 3hrs| 3hrs | 3hrs |
+| Fix bugs          | H | 3rs | 3hrs | 3hrs |
+| refactor Code     | H | 3hrs| 3hrs | 3hrs |
+| Total | H | 42hrs| 46hrs | 42hrs |
 
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+This is a code snippet where I reset the checkboxes and lerned something new
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+// Restart program for choice and pokemon data
+const restart = () => {
+    Pokemon1Choice.textContent = ""
+    pokemon2Choice.textContent = ""
+    select1.checked = false
+    select2.checked = false
+    getAllData()
+    
 }
+
+restart()
+
+restartButton.addEventListener("click",restart)
+
 ```
+
+
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ I change the way that I access the data so it could randomize and call to sets to get the intial pokemon names and the objects within the pokemon
 
 
 
