@@ -131,15 +131,18 @@ const renderList = (content) =>{
 // const removeElement()
 
 
-// const restart = () => {
-//    restartButton.addEventListener(click,restart){
 
-//        Pokemon1Choice.textContent = ""
-//        pokemon2Choice.textContent = ""
+const restart = () => {
+    Pokemon1Choice.textContent = ""
+    pokemon2Choice.textContent = ""
+    select1.checked = false
+    select2.checked = false
+    getAllData()
+    
+}
 
-//    }
+restart()
 
-// }
-        
+restartButton.addEventListener("click",restart)
 
 

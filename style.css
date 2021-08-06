@@ -1,7 +1,9 @@
 .container-1 {
     
     text-align: center;
-    margin: 100px;
+    width: 100%;
+    margin-top: 100px;
+    
 }
 
 .container-2{
@@ -26,16 +28,28 @@
 .title {
     margin: 50px;
 
+
 }
 .description{
 margin: 100px;
 }
 .restart{
     margin: 0px 0px 0px 0px;
+    padding: 20px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    font-size: 16px;
+}
+.go-container{
+    display: flex;
 }
 .go{
-    position: relative;
-    left: 925px;
+    margin: 0px 0px 0px 0px;
+    padding: 20px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    font-size: 16px;
+   margin: 0 auto;
 }
 
 .pokemon1Choice {
@@ -60,14 +74,23 @@ margin: 100px;
 
     } */
     .cards {
+        margin: 20px;
 
 
     }
 }
 
 @media screen and (max-width: 480px) {
+    .container-1{
+        padding-top: 100px;
+        margin-top: 150px;
+    }
     .title{
-
+        margin-top: 50px;
+      
+    }
+    .cards{
+        margin: 20px;
     }
     .description{
 
