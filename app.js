@@ -1,5 +1,5 @@
 
-// call all data I need into variables
+// called all data I need into variables
 const domain = "https://pokeapi.co/api/v2/"
 let pokeName1 = document.querySelector('.pokeName1')
 let type1 = document.querySelector(".type1")
