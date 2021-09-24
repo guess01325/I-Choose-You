@@ -1,4 +1,4 @@
-# I-Choose-You2
+# I-Choose-You
 
 
 ## Project Name
