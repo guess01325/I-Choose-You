@@ -47,19 +47,9 @@ const renderList = (content) =>{
         move1.textContent = `${content.moves[0].move.name}`
         pokePic1.src = `${content.sprites.front_default}`
         hp1 = content.stats[0].base_stat
-        
-        
-        // // pokeName2.texContent = `${content.name}`
-        // // type2 = textContent = `${content.types[0].type.name}`
-        // // move2 = textContent = `${content.sprites.back_default}`
-        
-        
-        
-        
-        
-        
-        
     }
+
+    
     // render second pokemon
     const renderList2 = (content2) => {
         pokeName2.textContent = `${content2.name}`
@@ -67,12 +57,11 @@ const renderList = (content) =>{
         move2.textContent = `${content2.moves[0].move.name}`
         pokePic2.src = `${content2.sprites.front_default}`
         hp2 = content2.stats[0].base_stat
-       
-    } 
+       } 
     
-    // Choose who wins
+    
+       // Choose who wins
     const choice = () =>{
-        console.log(hp1)
         if (hp1 > hp2) {
             Pokemon1Choice.textContent = "you win"
             pokemon2Choice.textContent = "you lose"
@@ -92,7 +81,6 @@ const renderList = (content) =>{
     const getAllData = async () =>{
         try{
             const response = await axios.get("https://pokeapi.co/api/v2/pokemon/?offset=20&limit=30")
-            console.log(response.data.results)
             const pokeDataArray = response.data.results
             let randomIndex1 = Math.floor(Math.random()*pokeDataArray.length-1)
             let randomIndex2 = Math.floor(Math.random()*pokeDataArray.length-1)
@@ -108,21 +96,18 @@ const renderList = (content) =>{
     getAllData()
     
     
+    
     // Get data for certain pokemon
     const getPokeData = async (pokemon1,pokemon2) =>{
         try{
             const response1 = await axios.get(`${domain}pokemon/${pokemon1.name}`)
             const response2 = await axios.get(`${domain}pokemon/${pokemon2.name}`)
-            console.log(response1.data)
             renderList(response1.data)
             renderList2(response2.data)
             goButton.addEventListener("click",choice)
             restartButton.addEventListener('click',remove)
             
-            
-            
-            
-    }catch(err){
+}catch(err){
         console.error(err)
     } 
 }
@@ -141,8 +126,10 @@ const restart = () => {
     getAllData()
     
 }
-
 restart()
+
+
+
 
 restartButton.addEventListener("click",restart)
 
